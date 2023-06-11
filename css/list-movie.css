@@ -1,0 +1,28 @@
+.card-movie {
+    width: calc(20% - 30px);
+}
+.card-movie .thumb {
+    height: 400px;
+}
+.card-movie .thumb img {
+    height: 100%;
+    object-fit: cover;
+}
+.banner-2 {
+    background-image: url(../img/service-bg.jpg);
+    background-size: cover;
+    height: 50vh;
+    padding-top: 200px;
+}
+.banner-2 h1 {
+    color: var(--primary-color);
+    font-size: 20px;
+}
+.banner-2 h2 {
+    color: #fff;
+    font-size: 58px;
+    width: 45%;
+}
+.banner-2 h2 span {
+    color: var(--primary-color);
+}

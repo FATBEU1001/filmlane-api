@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/detail.css" />
+    </head>
+    <body>
+        <div class="header">
+            <div class="container align-item-center">
+                <a href="" class="logo"><img src="img/logo.svg" alt="" /></a>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="list-movie.html?type=movie">Movies</a></li>
+                    <li><a href="list-movie.html?type=tv">TV shows</a></li>
+                    <li><a href="people.html">People</a></li>
+                </ul>
+                <div class="search">
+                    <input type="text" placeholder="Search for a movie, tv show" />
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="container align-item-center">
+                <div class="img">
+                    <img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg" alt="" />
+                </div>
+                <div class="content">
+                    <h1>Spider-Man: Across the Spider-Verse (2023)</h1>
+                    <div class="align-item-center">
+                        <div class="date">06/01/2023 (VN)</div>
+                        <ul class="type">
+                            <li>Action</li>
+                            <li>Adventure</li>
+                            <li>Animation</li>
+                            <li>Science Fiction</li>
+                        </ul>
+                        <div class="time"><i class="fa-regular fa-clock"></i> 2h 20m</div>
+                    </div>
+                    <div class="align-item-center mrt30">
+                        <div class="rate"><span>88%</span> user score</div>
+                        <div class="play" id="playtrailer">
+                            <span><i class="fa-solid fa-play"></i></span> <span>Play trailer</span>
+                        </div>
+                    </div>
+                    <div class="minidesc">It's how you wear the mask that matters</div>
+                    <div class="desc">
+                        <h3>Overview</h3>
+                        <p>
+                            After reuniting with Gwen Stacy, Brooklyn’s full-time, friendly neighborhood Spider-Man is catapulted across the Multiverse, where he encounters the Spider Society, a team of Spider-People charged with protecting the
+                            Multiverse’s very existence. But when the heroes clash on how to handle a new threat, Miles finds himself pitted against the other Spiders and must set out on his own to save those he loves most.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal">
+            <div class="modal-inner">
+                <div class="modal-header">
+                    <p>TRAILER</p>
+                    <i class="fa-solid fa-xmark close"></i>
+                </div>
+                <div class="modal-body">
+                    <iframe
+                        width="100%"
+                        height="550px"
+                        src="https://www.youtube.com/embed/shW9i6k8cB0"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="pre">
+                <div class="container align-item-center">
+                    <div class="text">
+                        <h2>TRIAL START FIRST 30 DAYS.</h2>
+                        <h3>Enter your email to create or restart your membership.</h3>
+                    </div>
+                    <div class="search">
+                        <input type="text" placeholder="Enter your email" />
+                        <button>GET STARTED</button>
+                    </div>
+                </div>
+            </div>
+            <div class="top">
+                <div class="container">
+                    <div class="align-item-center">
+                        <a href="" class="logo"><img src="img/logo.svg" alt="" /></a>
+                        <ul class="menu">
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Movies</a></li>
+                            <li><a href="">TV shows</a></li>
+                            <li><a href="">People</a></li>
+                        </ul>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="align-item-center">
+                        <p class="copyright">© 2022 <span>Filmlane</span>. All Rights Reserved</p>
+                        <div class="social">
+                            <a href=""><i class="fa-brands fa-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-youtube"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/style.js"></script>
+        <script src="js/detail.js"></script>
+    </body>
+</html>
