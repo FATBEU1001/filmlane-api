@@ -164,19 +164,19 @@ body {
     gap: 30px;
     padding-bottom: 35px;
 }
-.list-movie .list.scroll {
+.scroll {
     overflow-x: auto;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap !important;
 }
-.list-movie .list.scroll::-webkit-scrollbar {
+.scroll::-webkit-scrollbar {
     height: 8px;
 }
-.list-movie .list.scroll::-webkit-scrollbar-track {
+.scroll::-webkit-scrollbar-track {
     background: transparent;
     box-shadow: 0 0 0 2px var(--primary-color);
     border-radius: 10px;
 }
-.list-movie .list.scroll::-webkit-scrollbar-thumb {
+.scroll::-webkit-scrollbar-thumb {
     background: #fff;
     border-radius: 10px;
     box-shadow: inset 0 1px 0 #000, inset 0 -1px 0 #000;

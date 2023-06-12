@@ -1,5 +1,4 @@
 .detail {
-    background-image: linear-gradient(to top, #111d1ded, #111d1ded), url(https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/2I5eBh98Q4aPq8WdQrHdTC8ARhY.jpg);
     background-size: cover;
     padding: 150px 0 100px;
 }
@@ -32,9 +31,6 @@
 }
 .detail .content .type li {
     display: inline-block;
-}
-.detail .content .type li:not(:last-child)::after {
-    content: ",";
 }
 .detail .content .time {
     margin-left: 10px;
@@ -103,7 +99,7 @@
     visibility: visible;
 }
 .modal .modal-inner {
-    width: 80%;
+    width: 65%;
     background-color: #111d1dc2;
     border-radius: 5px;
     overflow: hidden;
@@ -152,4 +148,29 @@
     cursor: pointer;
     font-family: inherit;
     font-weight: 500;
+}
+.list-cast {
+    background-image: url(../img/upcoming-bg.png);
+    padding: 50px 0;
+}
+.list-cast .list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-bottom: 30px;
+}
+.list-cast .card {
+    min-width: calc(15% - 25px);
+    display: block;
+}
+.list-cast .card img {
+    border-radius: 10px;
+}
+.list-cast .card h3 {
+    color: #fff;
+    margin: 15px 0;
+}
+.list-cast .card p {
+    font-weight: 300;
+    color: #fff;
 }

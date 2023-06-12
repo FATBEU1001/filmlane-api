@@ -27,3 +27,10 @@ window.addEventListener("scroll", function () {
         header.classList.remove("fixed");
     }
 });
+
+//FUNCTION LẤY THAM SỐ TRÊN URL
+function getIDUrl() {
+    let url = window.location.href;
+    let searchParams = url.split("=");
+    return searchParams[1];
+}

@@ -1,8 +1,3 @@
-function getIDUrl() {
-    let url = window.location.href;
-    let searchParams = url.split("=");
-    return searchParams[1];
-}
 //SHOW DANH SÁCH MOVIE
 const listmovie = document.querySelector("#listmovie .list");
 const buttonMore = document.querySelector("#showmore");
