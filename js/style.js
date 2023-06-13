@@ -1,10 +1,14 @@
 const API_KEY = "api_key=e9e9d8da18ae29fc430845952232787c";
 const API_LINK = "https://api.themoviedb.org/3/";
+
+//FUNCTION FETCH DATA TỪ 1 URL NÀO ĐÓ
 async function getDataAPI(api_link) {
     const res = await fetch(api_link);
     const data = await res.json();
     return data;
 }
+
+//FUNCTION RENDER LIST MOVIE & TV
 function renderList(array, box) {
     array.forEach((element) => {
         box.innerHTML += ` <a href="detail.html?id=${element.id}" class="card-movie">
@@ -34,3 +38,22 @@ function getIDUrl() {
     let searchParams = url.split("=");
     return searchParams[1];
 }
+
+//FUNCTION SEARCH PHIM
+const searchInput = document.querySelector(".search input");
+const searchBtn = document.querySelector(".search i");
+
+function showSearch() {
+    if (!searchInput.value) {
+        alert("Seach input is empty");
+    } else {
+        window.location.href = `search.html?keyword=${searchInput.value}`;
+    }
+}
+
+searchBtn.addEventListener("click", showSearch);
+searchInput.addEventListener("keydown", function (e) {
+    if (event.keyCode === 13) {
+        showSearch();
+    }
+});

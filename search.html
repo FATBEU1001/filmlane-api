@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
-        <title>Filmlane</title>
+        <title>Document</title>
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -14,6 +14,7 @@
             referrerpolicy="no-referrer"
         />
         <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/list-movie.css" />
     </head>
     <body>
         <div class="header">
@@ -22,7 +23,7 @@
                 <ul class="menu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="list-movie.html?type=movie">Movies</a></li>
-                    <li><a href="list-movie.html?type=tvshow">TV shows</a></li>
+                    <li><a href="list-movie.html?type=tv">TV shows</a></li>
                     <li><a href="people.html">People</a></li>
                 </ul>
                 <div class="search">
@@ -31,56 +32,17 @@
                 </div>
             </div>
         </div>
-        <div class="banner">
+        <div class="banner-2">
             <div class="container">
                 <div class="content">
                     <h1>Filmlane</h1>
-                    <h2>Unlimited <span>Movie</span>, TVs Shows, & More.</h2>
-                    <ul>
-                        <li><a href="">Romance</a></li>
-                        <li><a href="">Drama</a></li>
-                    </ul>
-                    <a href="" class="btn-1"><i class="fa-solid fa-play"></i> WATCH NOW</a>
+                    <h2>Search</h2>
                 </div>
             </div>
         </div>
-        <div class="list-movie" id="nowplaying">
+        <div class="list-movie" id="listmovie">
             <div class="container">
-                <div class="headline-1">
-                    <h3>ONLINE STREAMING</h3>
-                    <h2>Now playing Movies</h2>
-                </div>
-                <div class="list scroll"></div>
-            </div>
-        </div>
-
-        <div class="list-movie" id="upcoming">
-            <div class="container">
-                <div class="headline-1">
-                    <h3>ONLINE STREAMING</h3>
-                    <h2>Upcoming movie</h2>
-                </div>
-                <div class="list scroll"></div>
-            </div>
-        </div>
-
-        <div class="list-movie" id="toprated">
-            <div class="container">
-                <div class="headline-1">
-                    <h3>ONLINE STREAMING</h3>
-                    <h2>Top Rated Movies</h2>
-                </div>
-                <div class="list scroll"></div>
-            </div>
-        </div>
-
-        <div class="list-movie" id="tvseri">
-            <div class="container">
-                <div class="headline-1">
-                    <h3>ONLINE STREAMING</h3>
-                    <h2>World Best TV Series</h2>
-                </div>
-                <div class="list scroll"></div>
+                <div class="list"></div>
             </div>
         </div>
 
@@ -110,7 +72,7 @@
                     </div>
                     <div class="divider"></div>
                     <div class="align-item-center">
-                        <p class="copyright">© 2023 <span>Filmlane</span>. All Rights Reserved</p>
+                        <p class="copyright">© 2022 <span>Filmlane</span>. All Rights Reserved</p>
                         <div class="social">
                             <a href=""><i class="fa-brands fa-facebook"></i></a>
                             <a href=""><i class="fa-brands fa-youtube"></i></a>
@@ -123,6 +85,6 @@
         </div>
 
         <script src="js/style.js"></script>
-        <script src="js/home.js"></script>
+        <script src="js/search.js"></script>
     </body>
 </html>
