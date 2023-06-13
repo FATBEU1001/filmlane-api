@@ -3,25 +3,27 @@ const modal = document.querySelector(".modal");
 const closeIcon = document.querySelectorAll(".modal .close");
 function showVideo() {
     modal.classList.add("active");
+    showTrailer();
 }
 closeIcon.forEach((element) => {
     element.addEventListener("click", function () {
         modal.classList.remove("active");
+        modal.querySelector(".modal-body").innerHTML = "";
     });
 });
 modal.addEventListener("click", function (e) {
     if (e.target == e.currentTarget) {
         modal.classList.remove("active");
+        modal.querySelector(".modal-body").innerHTML = "";
     }
 });
 
 //XỬ LÝ API
+const id = getIDUrl();
 async function renderDetailMovie() {
-    const id = getIDUrl();
     //Lấy data detail
     const API_DETAIL = `${API_LINK}movie/${id}?${API_KEY}`;
     const dataDetail = await getDataAPI(API_DETAIL);
-
     //Show data detail
     const boxDetail = document.querySelector(".detail");
     boxDetail.style.backgroundImage = `linear-gradient(to top, #111d1ded, #111d1ded),url(https://image.tmdb.org/t/p/w1920_and_h800_multi_faces${dataDetail.backdrop_path})`;
@@ -63,19 +65,47 @@ async function renderDetailMovie() {
             <p>${cast.character}</p>
         </div>`;
     });
-
-    //Lấy video trailer
+}
+renderDetailMovie();
+async function showTrailer() {
     const API_VIDEO = `${API_LINK}movie/${id}/videos?${API_KEY}`;
     const dataVideo = await getDataAPI(API_VIDEO);
     const trailer = dataVideo.results.find((item) => item.type == "Trailer");
     modal.querySelector(".modal-body").innerHTML = `<iframe
         width="100%"
         height="500"
-        src="https://www.youtube.com/embed/${trailer.key}"
+        src="https://www.youtube.com/embed/${trailer.key}?autoplay=1"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
     ></iframe>`;
 }
-renderDetailMovie();
+async function showReview() {
+    const API_REVIEW = `${API_LINK}movie/${id}/reviews?${API_KEY}`;
+    const dataReview = await getDataAPI(API_REVIEW);
+    console.log(dataReview);
+    const boxReview = document.querySelector(".list-review .list");
+
+    dataReview.results.forEach((element) => {
+        boxReview.innerHTML += `<div class="card">
+        <div class="thumb"><img src="${element.author_details["avatar_path"] ? element.author_details["avatar_path"].substring(1) : ""}" alt="${element.author}" /></div>
+        <div class="content">
+            <h3>A review by ${element.author}</h3>
+            <div class="info">Written by <span>${element.author}</span> on <span>${element.created_at}</span></div>
+            <p>${element.content} </p>
+            <span onclick="showMoreDesc(event)" class="more">Show more</span>
+        </div>
+    </div>`;
+    });
+}
+showReview();
+function showMoreDesc(event) {
+    const parentElement = event.target.closest(".card");
+    parentElement.querySelector("p").classList.toggle("show");
+    if (event.target.innerHTML == "Show more") {
+        event.target.innerHTML = "Hide";
+    } else {
+        event.target.innerHTML = "Show more";
+    }
+}

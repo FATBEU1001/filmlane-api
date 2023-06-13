@@ -106,10 +106,10 @@
     position: relative;
     margin: 50px auto;
     transform: scale(0.5);
-    transition: 0.5s;
 }
 .modal.active .modal-inner {
     transform: scale(1);
+    transition: 0.5s;
 }
 .modal .modal-header {
     background-color: var(--secondary-color);
@@ -173,4 +173,61 @@
 .list-cast .card p {
     font-weight: 300;
     color: #fff;
+}
+.list-review {
+    background-image: url(../img/service-bg.jpg);
+    padding: 50px 0;
+}
+.list-review .list {
+    padding-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.list-review .list .card {
+    background-color: #ffffff05;
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    color: #fff;
+    width: calc(50% - 30px);
+    border-radius: 5px;
+}
+.list-review .list .card .thumb {
+    width: 10%;
+}
+.list-review .list .card .thumb img {
+    border-radius: 5px;
+}
+.list-review .list .card .content {
+    width: 90%;
+}
+.list-review .list .card .content h3 {
+    margin-bottom: 15px;
+}
+.list-review .list .card .content .info {
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+.list-review .list .card .content .info span {
+    font-weight: 600;
+}
+.list-review .list .card .content p {
+    font-weight: 300;
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+.list-review .list .card .content p.show {
+    -webkit-line-clamp: unset;
+}
+.list-review .list .card .content .more {
+    margin-top: 15px;
+    font-size: 13px;
+    font-style: italic;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff9e;
 }
