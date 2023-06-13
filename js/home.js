@@ -14,6 +14,7 @@ async function homeRender() {
 
     const dataTvSeri = await getDataAPI(`${API_LINK}tv/popular?${API_KEY}&language=en-US&page=1`);
     renderList(dataTvSeri.results, tvSeriBox);
+    console.log(dataTvSeri);
 }
 homeRender();
 
